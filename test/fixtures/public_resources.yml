@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  area: MyString
+  institution_name: MyString
+  level: MyString
+  genre: MyString
+  url: MyString
+
+two:
+  area: MyString
+  institution_name: MyString
+  level: MyString
+  genre: MyString
+  url: MyString

@@ -1,0 +1,35 @@
+ <% @articles.each_with_index do |article, index|%>
+ <div class="list-group">
+    <!-- <a href="#" class="list-group-item active">
+       <h4 class="list-group-item-heading">
+       文章列表
+       </h4>
+    </a> -->
+     <div class="list-group-item">
+       <h4 class="list-group-item-heading">
+         <%= link_to article.title ,article_path(article.id) %>
+          <%#= article.title %>
+       </h4>
+       <p class="list-group-item-text">
+            <%= article.content %>
+       </p>
+       <span>浏览<%= article.show_count %></span><span>评论</span>
+
+    </div>
+
+ </div>
+  <% end %>
+
+  <div class="pager">
+     <%= will_paginate @articles%>
+   </div>
+
+
+<style>
+.list-group-item-text {
+  line-height: 20px;
+}
+ span {
+  padding-left: 10px;
+}
+</style>

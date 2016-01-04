@@ -1,0 +1,46 @@
+<div class="navbar navbar-default navbar-static-top" style="background-color: #29A7E1;">
+  <div class="container">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="/">部落</a>
+
+    <div class="navbar-collapse collapse navbar-responsive-collapse">
+      <ul class="nav navbar-nav banners">
+        <li><%= link_to "主页", home_index_path %></li>
+        <li><%= link_to "博文", articles_path %></li>
+        <li><%= link_to "趣图", "/path3" %></li>
+        <li><%= link_to "视频", "/path3" %></li>
+        <li><%= link_to "关于", "/path3" %></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+         <%= form_tag articles_path, method: :get, class: "navbar-form navbar-left search-form" do %>
+        <li class="nav-search hidden-xs">
+          <%= text_field_tag(:q,params[:q],placeholder: "请输入你想找的文章",class: "form-control") %>
+          <%= submit_tag "搜索", class: "btn btn-primary"%>
+        </li>
+        <% end %>
+      </ul>
+
+
+    </div>
+  </div>
+</div>
+
+<style>
+.navbar-default .navbar-brand {
+  color: #fff;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #fff;
+}
+
+</style>
+
+
+
+
+<!-- /container -->

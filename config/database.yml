@@ -1,0 +1,19 @@
+default: &default
+  adapter: mysql2
+  pool: 5
+  timeout: 5000
+  host: localhost
+  database: shop
+  username: root
+  password: '199312'
+
+
+development:
+  <<: *default
+
+
+test:
+  <<: *default
+
+production:
+  <<: *default

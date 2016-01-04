@@ -1,0 +1,27 @@
+
+<%= simple_form_for @public_resources, :html => { class: 'form-horizontal'}  do |f| %>
+  <table class="table table-bordered">
+    <tbody>
+      <tr>
+        <th class=" bg w150"><%#= require_span %>区域：</th>
+        <td><%= f.text_field :area %></td>
+      </tr>
+
+      <tr>
+        <th class="bg"><%#= require_span %>机构名称：</th>
+        <td><%= f.text_field :institution_name %></td>
+      </tr>
+      <tr>
+        <th class='bg'><%#= require_span %>标题：</th>
+        <td><%= f.text_field :level %></td>
+      </tr>
+      <tr>
+        <th class='bg'><%#= require_span %>标题：</th>
+        <td><%= f.text_field :genre %></td>
+      </tr>
+      <tr>
+        <th class='bg'><%#= require_span %>标题：</th>
+        <td><%= f.text_field :url %></td>
+      </tr>
+    </table>
+<% end %>
