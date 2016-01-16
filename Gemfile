@@ -20,6 +20,18 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 gem 'simple_form'
+gem "nested_form"
+
+
+gem 'devise'
+gem 'cancancan' # or cancan
+#上传
+gem 'carrierwave'
+gem 'rmagick', '2.13.2'
+gem 'mime-types'
+#操作Excel
+gem 'spreadsheet'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -31,6 +43,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'ransack', github: 'activerecord-hackery/ransack'
 gem 'will_paginate', '~> 3.0.6'
+
+gem 'nokogiri'
+gem 'mechanize'
+gem 'activerecord', '~> 4.2'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

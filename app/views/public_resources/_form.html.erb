@@ -1,5 +1,5 @@
 
-<%= simple_form_for @public_resources, :html => { class: 'form-horizontal'}  do |f| %>
+<%= simple_nested_form_for @public_resource, :html => { class: 'form-horizontal'}  do |f| %>
   <table class="table table-bordered">
     <tbody>
       <tr>
@@ -23,5 +23,11 @@
         <th class='bg'><%#= require_span %>标题：</th>
         <td><%= f.text_field :url %></td>
       </tr>
+
+      <tr>
+        <th class='bg'><%#= require_span %>文件：</th>
+      <td><%= render partial: '/shared/upload_file', locals: { f: f, obj: @public_resource} %></td>
+      </tr>
     </table>
+    <%= f.submit '提交'%>
 <% end %>

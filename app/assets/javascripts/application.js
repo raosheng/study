@@ -17,3 +17,4 @@
 //= require bootstrap/alert
 //= require slide.min
 //= require_tree .
+//= require jquery_nested_form

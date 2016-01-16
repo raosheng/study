@@ -1,0 +1,11 @@
+<div id="attachment_fields">
+  <%= f.simple_fields_for :attachments do |form|  %>
+    <% if !obj.new_record? && obj.attachments.present? %>
+      <%= form.text_field :file, readOnly: true, disabled: true %>
+    <% end %>
+    <%= form.input_field :file %>
+    <%= form.link_to_remove "删除" %>
+  <% end %>
+  <br/>
+  <%= f.link_to_add "添加附件", :attachments, :class => "btn btn-small btn-primary" %>
+</div>
