@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
   layout "home"
   def index
     @q = Article.where(status: true).ransack(params[:q])
-    @articles = @q.result.paginate(:page => params[:page], :per_page => 4)
+    @articles = @q.result.page(params[:page]).per(params[:per] = 5)
   end
 
   def show

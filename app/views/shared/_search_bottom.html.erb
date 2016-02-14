@@ -1,0 +1,3 @@
+  <button class="btn btn-info btn-small" type="submit">查 询</button>
+  <button class="btn btn-info btn-small" onclick='window.location.href=$(".form-search").attr("action");; return false;'>全部</button>
+  <span>总共：<%= @q.result.count %>条</span>

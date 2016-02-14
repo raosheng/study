@@ -1,0 +1,76 @@
+
+<h5 class='mt20'><%= @public_resource.area %><%= @public_resource.institution_name%>基本详情</h5>
+
+<table class="common table-bordered">
+  <tbody>
+    <tr>
+      <th class='bg'><%= require_span %>机构名称：</th>
+      <td><%= @public_resource.institution_name %></td>
+      <th class='bg'><%= require_span %>区域：</th>
+      <td><%= @public_resource.area %></td>
+    </tr>
+
+    <tr>
+      <th class='bg'>级别：</th>
+      <td><%= @public_resource.level %></td>
+      <th class='bg'>网址：</th>
+      <td><%= @public_resource.url %></td>
+    </tr>
+
+    <tr>
+      <th class='bg'>政采：</th>
+      <td><%= @public_resource.zc %></td>
+      <th class='bg'>国土：</th>
+      <td><%= @public_resource.gt %></td>
+    </tr>
+
+    <tr>
+      <th class='bg'>建设：</th>
+      <td><%= @public_resource.js %></td>
+      <th class='bg'>产权：</th>
+      <td><%= @public_resource.cq %></td>
+    </tr>
+
+    <tr>
+      <th class='bg'>其他：</th>
+      <td><%= @public_resource.other %></td>
+      <th class='bg'>单位性质：</th>
+      <td><%= @public_resource.nature %></td>
+    </tr>
+
+
+    <tr>
+      <th class='bg'>行政级别：</th>
+      <td><%= @public_resource.administrative %></td>
+      <th class='bg'>模式：</th>
+      <td><%= @public_resource.pattern %></td>
+    </tr>
+
+    <tr>
+      <th class='bg'>地市共享：</th>
+      <td><%= @public_resource.cities_share %></td>
+      <th class='bg'>政务中心：</th>
+        <td><%= @public_resource.center %></td>
+    </tr>
+
+    <tr>
+      <th class='bg'>政采公告：</th>
+      <td><%= @public_resource.center_notice %></td>
+      <th class='bg'>备注：</th>
+        <td><%= @public_resource.remark %></td>
+    </tr>
+
+    <tr>
+      <th class='bg'>进场交易数：</th>
+      <td colspan="3"><%= @public_resource.category %></td>
+    </tr>
+
+
+
+
+          <%#= @product.sell? ? '是' : '否' %>
+
+  </tbody>
+
+</table>
+<center><%= link_to_back url: params[:back], class: "btn btn-default" %></center>

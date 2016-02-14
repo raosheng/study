@@ -10,6 +10,9 @@
 <body>
   <div class="header">
 <%= render "shared/banner"%>
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% end %>
 </div>
 <div class="container">
   <div class="row">

@@ -2,32 +2,79 @@
 <%= simple_nested_form_for @public_resource, :html => { class: 'form-horizontal'}  do |f| %>
   <table class="table table-bordered">
     <tbody>
-      <tr>
+      <!-- <tr>
         <th class=" bg w150"><%#= require_span %>区域：</th>
-        <td><%= f.text_field :area %></td>
-      </tr>
+        <td><%#= f.text_field :area %></td>
+      </tr> -->
 
       <tr>
-        <th class="bg"><%#= require_span %>机构名称：</th>
+        <th class="bg"><%= require_span %>机构名称：</th>
         <td><%= f.text_field :institution_name %></td>
-      </tr>
-      <tr>
-        <th class='bg'><%#= require_span %>标题：</th>
+        <th class='bg'><%= require_span %>级别：</th>
         <td><%= f.text_field :level %></td>
       </tr>
       <tr>
-        <th class='bg'><%#= require_span %>标题：</th>
-        <td><%= f.text_field :genre %></td>
+
       </tr>
       <tr>
-        <th class='bg'><%#= require_span %>标题：</th>
+        <th class='bg'><%= require_span %>类型：</th>
+        <td><%= f.text_field :genre %></td>
+        <th class='bg'><%= require_span %>网址：</th>
         <td><%= f.text_field :url %></td>
       </tr>
 
       <tr>
-        <th class='bg'><%#= require_span %>文件：</th>
-      <td><%= render partial: '/shared/upload_file', locals: { f: f, obj: @public_resource} %></td>
+        <th class='bg'>政采：</th>
+        <td><%= f.check_box :zc %></td>
+        <th class='bg'>国土：</th>
+        <td><%= f.check_box :gt %></td>
       </tr>
+
+      <tr>
+        <th class='bg'>建设：</th>
+        <td><%= f.check_box :js %></td>
+        <th class='bg'>产权：</th>
+        <td><%= f.check_box :cq %></td>
+      </tr>
+
+      <tr>
+        <th class='bg'>其他：</th>
+        <td><%= f.text_area :other, size: 40*40 %></td>
+        <th class='bg'>单位性质：</th>
+        <td><%= f.select :nature, PublicResource::Department.map {|i| [i]}, include_blank: "请选择" %></td>
+      </tr>
+
+
+      <tr>
+        <th class='bg'>行政级别：</th>
+        <td><%= f.select :administrative,PublicResource::ADMINTIVE.map {|i| [i]}, include_blank: "请选择" %></td>
+        <th class='bg'>模式：</th>
+        <td><%= f.text_field :pattern %></td>
+      </tr>
+
+      <tr>
+        <th class='bg'>地市共享：</th>
+        <td><%= f.text_field :cities_share %></td>
+        <th class='bg'>政务中心：</th>
+          <td><%= f.text_field :center %></td>
+      </tr>
+
+      <tr>
+        <th class='bg'>政采公告：</th>
+        <td><%= f.text_field :center_notice %></td>
+        <th class='bg'>备注：</th>
+          <td><%= f.text_field :remark %></td>
+      </tr>
+
+      <tr>
+        <th class='bg'>进场交易数：</th>
+        <td colspan="3"><%= f.text_field :category %></td>
+      </tr>
+      <!-- <tr>
+        <th class='bg'><%= require_span %>文件：</th>
+      <td><%#= render partial: '/shared/upload_file', locals: { f: f, obj: @public_resource} %></td>
+      </tr> -->
     </table>
-    <%= f.submit '提交'%>
+    <center><%= f.submit '提交'%>
+    <%= link_to_back url: params[:back], class: "btn btn-default" %></center>
 <% end %>

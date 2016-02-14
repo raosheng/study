@@ -27,7 +27,7 @@ gem 'devise'
 gem 'cancancan' # or cancan
 #上传
 gem 'carrierwave'
-gem 'rmagick', '2.13.2'
+gem 'mini_magick'
 gem 'mime-types'
 #操作Excel
 gem 'spreadsheet'
@@ -42,7 +42,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'ransack', github: 'activerecord-hackery/ransack'
-gem 'will_paginate', '~> 3.0.6'
+gem 'kaminari', '~> 0.13.0'
 
 gem 'nokogiri'
 gem 'mechanize'

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160115173554) do
+ActiveRecord::Schema.define(version: 20160214072904) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title",      limit: 255,   comment: "标题"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20160115173554) do
     t.string   "attachment",          limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "file",                limit: 255
   end
 
   create_table "public_resources", force: :cascade do |t|
@@ -54,6 +55,7 @@ ActiveRecord::Schema.define(version: 20160115173554) do
     t.string   "center",           limit: 255,   comment: "政务中心"
     t.string   "center_notice",    limit: 255,   comment: "政采公告"
     t.text     "remark",           limit: 65535, comment: "备注"
+    t.integer  "category",         limit: 4
   end
 
   create_table "videos", force: :cascade do |t|

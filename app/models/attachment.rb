@@ -1,5 +1,5 @@
 class Attachment < ActiveRecord::Base
-  belongs_to :attachable, polymorphic: true
+  belongs_to :attachmentable, polymorphic: true
 
   validate :file_size
 

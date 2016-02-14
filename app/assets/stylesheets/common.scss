@@ -2,3 +2,243 @@
 
 .w150 {width: 150px;}
 .bg {background-color: #e7e7e7;}
+.red {color: red;}
+/*字体*/
+.font12 { font-size: 12px; }
+.font13 { font-size: 13px; }
+.font14 { font-size: 14px; }
+.font16 { font-size: 16px; }
+.font18 { font-size: 18px; }
+.f14{font-size:14px;}
+.f16{font-size:16px;}
+.f18{font-size:18px;}
+.b{font-weight:bold;}
+
+/*宽度*/
+.w20{ width: 20px; }
+.w30 { width: 30px; }
+.w50{ width: 50px; }
+.w60{ width: 60px; }
+.w80{ width: 80px; }
+.w100{ width: 100px; }
+.w120{ width: 120px; }
+.w140{ width: 140px; }
+.w158{ width: 158px; }
+.w160{ width: 160px; }
+.w200{ width: 200px; }
+.w230 { width: 230px; }
+.w258 { width: 258px; }
+.w280 { width: 280px; }
+.w300{ width: 300px; }
+.w320{ width: 320px; }
+.w400{ width: 400px; }
+.w450 { width: 450px; }
+.w500 { width: 500px; }
+.w508{ width: 508px; }
+.w600 { width: 600px; }
+.w700 { width: 700px; }
+.w750 { width: 750px; }
+.w800{ width: 800px; }
+.w960 { width: 960px; }
+.w100p { width: 100%; }
+.w1400 { width: 1400px; }
+.w10p { width: 10%; }
+.w20p { width: 20%; }
+.w25p { width: 25%; }
+.w40p { width: 40%; }
+.w92p { width: 92%; }
+.w89p { width: 89%; }
+.w100p{ width:100%; }
+
+/*高度*/
+.h15{ height: 15px; }
+.h25{ height: 25px; }
+.h24{ height: 24px; }
+.h30{ height: 30px }
+.h40{ height: 40px }
+.h50{ height: 50px }
+.h80{ height: 80px }
+.h100 { height: 100px; }
+.h125 { height: 125px; }
+.h150 { height: 150px; }
+.h160{ height: 160px }
+.h270 { height: 270px; }
+.h307 { height: 307px; }
+.h365 { height: 365px; }
+
+/*位置*/
+.center{margin: 0 auto;}
+.no-margin{ margin: 0px; }
+.fl{ float: left; }
+.fr{ float: right; }
+.pr{position: relative;}
+.pa{position: absolute;}
+
+.l208{left: 208px;}
+
+.mt3 { margin-top:3px; }
+.mt5 { margin-top:5px; }
+.mt6 { margin-top:6px; }
+.mt8 { margin-top:8px; }
+.mt10 { margin-top:10px; }
+.mt12 { margin-top:12px; }
+.mt15 { margin-top:15px; }
+.mt20 { margin-top:20px; }
+.mt25 { margin-top: 25px; }
+.mt50 { margin-top: 50px; }
+
+.mb10 { margin-bottom: 10px; }
+.mb12 { margin-bottom: 12px; }
+
+.ml3 { margin-left: 3px;}
+.ml5 { margin-left: 5px;}
+.ml8{margin-left:8px;}
+.ml10 { margin-left: 10px; }
+.ml12 { margin-left: 12px; }
+.ml15 { margin-left: 15px; }
+.ml20 { margin-left: 20px; }
+.ml30 { margin-left: 30px; }
+.ml50 { margin-left: 50px; }
+.ml60 { margin-left: 60px; }
+.ml100 { margin-left: 100px; }
+.ml180 { margin-left: 180px; }
+.ml185 { margin-left: 185px; }
+
+.mr8{margin-left:8px;}
+.mr10 { margin-right: 10px; }
+.mr15 { margin-right: 15px; }
+.mr16 { margin-right: 16px; }
+.mr13 { margin-right: 13px; }
+.mr18 { margin-right: 18px; }
+.mr25 { margin-right: 25px; }
+.mr30 { margin-right: 30px; }
+.m12_0{ margin: 12px 0px;}
+.m8_0{ margin: 8px 0px;}
+
+.p12 { padding: 12px;}
+
+.pt7 { padding-top: 7px; }
+.pt10{padding-top:10px;}
+.pt15 { padding-top: 15px; }
+.pt25 { padding-top: 25px; }
+.pt40 { padding-top: 40px; }
+
+.pl0 { padding-left: 0px; }
+.pl10 { padding-left: 10px; }
+.pl15 { padding-left: 15px; }
+.pl20 { padding-left: 20px; }
+.pl50 { padding-left: 50px; }
+.pl130 { padding-left: 130px; }
+.pl150 { padding-left: 150px; }
+.pd0_20{ padding: 0px 20px;}
+
+
+.pb10{padding-bottom:10px;}
+
+.pr5 { padding-right: 5px; }
+.pr10{padding-right:10px;}
+.pr15 { padding-right: 15px; }
+.pr50{padding-right: 50px;}
+
+
+/*内容位置*/
+.textc{text-align: center;}
+.textr{text-align: right;}
+.textl{text-align: left;}
+.textm{vertical-align:middle;}
+.textcm{text-align: center;vertical-align:middle;}
+.tc{text-align: center;}
+.tl { text-align: left; }
+.tr { text-align: right; }
+.vat { vertical-align: top;}
+.vam { vertical-align: middle; }
+
+/*颜色*/
+.pink{color:#FF007E!important;}
+.gary{color:#777777!important;}
+.orange{color:orange;}
+.red {color: red;}
+.green { color: green; }
+.blue { color: #0000FF; }
+.blue_link { color: #005EA7!important;}
+.blue_link:hover {text-decoration: underline!important;}
+.black { color: #000000; }
+.white { color: #FFFFFF; }
+.grey { color: grey;}
+.bgdd{ background-color:#EEE; }
+.bgred { background-color:#EC5757; }
+.bggrey { background-color:#FBFBFB; }
+.bgwhite { background-color: #ffffff; }
+.bg7{background-color: #f3f3f3;}
+
+/*其他*/
+.clear{clear: both;}
+.hide { display: none; }
+.block {display: block;}
+.in_block {display: inline-block;}
+.pointer{ cursor: pointer }
+.bt0 {border-top: 0px}
+.underline {text-decoration: underline;}
+.lh60{ line-height: 60px; }
+.lh23{ line-height: 23px; }
+.lh32{ line-height: 32px; }
+.lh16{ line-height: 16px; }
+
+/*footer*/
+.footer {
+  width: 100%;
+  text-align: center;
+  background: #f9f9f9 url(/assets/dota/fotter_bg_03.jpg) repeat-x;
+}
+
+table.common {
+  border-collapse:collapse;
+  border-spacing:0;
+  width:100%;
+  font-size:12px;
+
+  td, th {
+    margin:0;
+    padding:4px;
+    border:1px solid #ccc;
+  }
+
+  thead th {
+    margin:0;
+    padding:4px;
+    border:1px solid #ccc;
+    font-weight:bold;
+  }
+}
+
+th.bg {
+  background-color: #f5f5f5;
+  text-align: right;
+}
+
+th.bg_tc {
+  background-color: #f5f5f5;
+  text-align: center;
+  min-width: 150px;
+}
+
+th.bg_r {
+  width: 100px;
+}
+
+.del {
+  text-decoration: line-through;
+}
+
+// 换行
+.break {table-layout:fixed; word-break: break-all; overflow:hidden;}
+
+/* 解决双击蓝屏 */
+.decrease_num, .increase_num, .list_decrease_num, .list_increase_num{
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+  /* Rules below not implemented in browsers yet */
+  -o-user-select: none;
+  user-select: none;
+}

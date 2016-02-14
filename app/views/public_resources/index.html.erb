@@ -1,6 +1,8 @@
-<%= link_to '上传',new_public_resource_path %>
 
+<%= link_to '上传附件',import_public_resources_path, class: 'btn btn-primary' %>
+<span class="ml10"><%= link_to '新增',new_public_resource_path %></span>
           <div class="panel-body">
+            <%= render "search" %>
             <table class="table table-striped">
               <tr>
                 <th>序号</th>
@@ -9,17 +11,32 @@
                 <th>级别</th>
                 <th>类型</th>
                 <th>网址</th>
+                <th>进场类别</th>
                 <th>操作</th>
               </tr>
+              <% @public_resources.each_with_index do |public_resource, index|%>
               <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td><%= show_index(index, @public_resources.size) %></td>
+                <td><%= public_resource.area%></td>
+                <td><%= public_resource.institution_name%></td>
+
+                <td><%= public_resource.level %></td>
+                <td><%= public_resource.genre %></td>
+                <% if public_resource.url == '无'%>
+                <td><%= public_resource.url %></td>
+                <% else %>
+                <td><%= link_to public_resource.url, public_resource.url, :target => '_blank' %></td>
+                <% end %>
+                <td><%= public_resource.category %></td>
+                <td><%= link_to '查看',public_resource_path(public_resource, back: request.fullpath) %>
+                    <%= link_to '修改',edit_public_resource_path(public_resource, back: request.fullpath) %>
+                    <%= link_to '删除',public_resource_path(public_resource), :method => :delete %></td>
               </tr>
+              <% end %>
+            </table>
+            <div class="pager">
+               <%= paginate @public_resources  %>
+            </div>
           </div>
         </div>
      </div>

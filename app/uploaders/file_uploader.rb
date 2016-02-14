@@ -19,7 +19,7 @@ class FileUploader < BaseUploader
   end
 
   def file_ext
-    %w(doc txt zip rar pdf)
+    %w(doc txt zip rar pdf xls)
   end
 
   def image_ext
@@ -36,4 +36,3 @@ class FileUploader < BaseUploader
       "uploads/" + dir
     end
 end
-

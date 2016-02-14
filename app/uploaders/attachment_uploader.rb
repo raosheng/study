@@ -1,11 +1,11 @@
 # -*- encoding : utf-8 -*-
 
 class AttachmentUploader < BaseUploader
-  
+
   def store_dir
     dyniamc_dir
   end
-  
+
   def url
     '/' + dyniamc_dir + "/#{file.try(:filename)}"
   end
@@ -19,7 +19,7 @@ class AttachmentUploader < BaseUploader
   end
 
   def file_ext
-    %w(doc txt zip rar pdf)
+    %w(doc txt zip rar pdf xls xlsx)
   end
 
   def image_ext
@@ -32,4 +32,3 @@ class AttachmentUploader < BaseUploader
       "uploads/" + dir
     end
 end
-

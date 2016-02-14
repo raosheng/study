@@ -8,7 +8,12 @@ Rails.application.routes.draw do
 
   resources :articles
 
-  resources :public_resources
+  resources :public_resources do
+    collection do
+      get :import
+      post :import_execl
+    end
+  end
 
   resources :home do
   member do
