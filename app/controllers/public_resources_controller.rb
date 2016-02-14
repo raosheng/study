@@ -26,6 +26,12 @@ class PublicResourcesController < ApplicationController
   end
   end
 
+  def update
+    @public_resource = PublicResource.find(params[:id])
+    @public_resource.update_attributes(public_resources_params)
+    redirect_to public_resources_path
+  end
+
   def destroy
     @public_resource = PublicResource.find(params[:id])
     @public_resource.destroy
