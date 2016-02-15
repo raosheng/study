@@ -15,5 +15,14 @@
 /log/*
 !/log/.keep
 /tmp
+config/*.yml
 /public/uploads
+public/cache/*
+public/assets/*
 .byebug_history
+public/index.html
+vendor/cache
+vendor/bundle/
+
+db/schema.rb
+Gemfile.lock
