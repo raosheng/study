@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160214072904) do
+ActiveRecord::Schema.define(version: 20160215031016) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title",      limit: 255,   comment: "标题"
@@ -43,10 +43,10 @@ ActiveRecord::Schema.define(version: 20160214072904) do
     t.string   "url",              limit: 255,   comment: "网址"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "zc",               limit: 255,   comment: "政采"
-    t.string   "gt",               limit: 255,   comment: "国土"
-    t.string   "js",               limit: 255,   comment: "建设"
-    t.string   "cq",               limit: 255,   comment: "产权"
+    t.boolean  "zc",               limit: 1,     comment: "政采"
+    t.boolean  "gt",               limit: 1,     comment: "国土"
+    t.boolean  "js",               limit: 1,     comment: "建设"
+    t.boolean  "cq",               limit: 1,     comment: "产权"
     t.text     "other",            limit: 65535, comment: "其他"
     t.string   "nature",           limit: 255,   comment: "单位性质"
     t.string   "administrative",   limit: 255,   comment: "行政级别"

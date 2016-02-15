@@ -1,6 +1,10 @@
 class PublicResource < ActiveRecord::Base
   Department = ['事业','自收自支','公益']
-  ADMINTIVE = ['厅','副厅','正处','副处', '正科', '副科']
+  ADMINTIVE = ['厅','副厅','处','正处','副处', '正科', '副科']
+  ZC = {1 => '有', 0 => '无'}
+  GT = {1 => '有', 0 => '无'}
+  JS = {1 => '有', 0 => '无'}
+  CQ = {1 => '有', 0 => '无'}
   has_many :attachments, :as => :attachmentable
   accepts_nested_attributes_for :attachments, :reject_if => lambda { |item| item[:file].blank? }, :allow_destroy => true
 
@@ -24,7 +28,7 @@ class PublicResource < ActiveRecord::Base
       gt = row[7]
       cq = row[8]
       other = row[9].to_s
-      category = row[10]
+      category = row[10].
       nature = row[11].to_s
       administrative = row[12].to_s
       pattern = row[13].to_s

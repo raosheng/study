@@ -19,16 +19,16 @@
 
     <tr>
       <th class='bg'>政采：</th>
-      <td><%= @public_resource.zc %></td>
+      <td><%= @public_resource.zc? ? '有' : '无' %></td>
       <th class='bg'>国土：</th>
-      <td><%= @public_resource.gt %></td>
+      <td><%= @public_resource.gt? ? '有' : '无' %></td>
     </tr>
 
     <tr>
       <th class='bg'>建设：</th>
-      <td><%= @public_resource.js %></td>
+      <td><%= @public_resource.js? ? '有' : '无' %></td>
       <th class='bg'>产权：</th>
-      <td><%= @public_resource.cq %></td>
+      <td><%= @public_resource.cq? ? '有' : '无' %></td>
     </tr>
 
     <tr>

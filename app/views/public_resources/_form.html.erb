@@ -25,16 +25,22 @@
 
       <tr>
         <th class='bg'>政采：</th>
-        <td><%= f.check_box :zc %></td>
+        <td>
+          <%= f.radio_button :zc, true  %>有
+          <%= f.radio_button :zc, false  %>无
+       </td>
         <th class='bg'>国土：</th>
-        <td><%= f.check_box :gt %></td>
+        <td><%= f.radio_button :gt, true  %>有
+           <%= f.radio_button :gt, false  %>无</td>
       </tr>
 
       <tr>
         <th class='bg'>建设：</th>
-        <td><%= f.check_box :js %></td>
+        <td><%= f.radio_button :js, true  %>有
+           <%= f.radio_button :js, false  %>无</td>
         <th class='bg'>产权：</th>
-        <td><%= f.check_box :cq %></td>
+        <td><%= f.radio_button :cq, true  %>有
+           <%= f.radio_button :cq, false  %>无</td>
       </tr>
 
       <tr>

@@ -1,6 +1,6 @@
 <%= form_for @q, :url => public_resources_path, :html => {:method => :get, :class => "well form-search"}  do |f| %>
   <span>地区：<%= f.select :area_eq, PublicResource.all.map{ |public_resource| [public_resource.area]}, {include_blank: '不限'},{:class => "some_class"} %></span>
-  <span>级别：<%= f.select :level_eq, PublicResource.all.map{ |public_resource| [public_resource.level]}, {include_blank: '不限'} %></span>
+  <span>级别：<%= f.select :level_eq, PublicResource.all.map{ |public_resource| [public_resource.level]}.uniq, {include_blank: '不限'} %></span>
   <%= render "/shared/search_bottom", :f => f %>
 <% end %>
 <style>
