@@ -1,0 +1,21 @@
+<div class="user">
+<div class="cart">
+<h2>登录</h2>
+
+<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+
+<div class="form-inputs">
+   <div class="login"><span>登&nbsp;&nbsp;录&nbsp;&nbsp;名：</span><%= f.text_field :login,required: true, class: 'text form-control',placeholder: "请输入用戶名或邮箱" %></div>
+   <div class="login"><span>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</span><%= f.text_field :password, required: false, class: 'text form-control', hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length)%></div><br />
+   <div class="login_re"><%= f.check_box :remember_me, as: :boolean, class: 'mt10' if devise_mapping.rememberable? %>&nbsp;&nbsp;记住我</div>
+  </div>
+ 
+  <div class="button">
+    <%= f.button :submit, "登录",style: 'width: 50%' %>
+  </div>
+<% end %>
+
+<%#= render "devise/shared/links" %>
+</div>
+</div>

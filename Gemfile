@@ -24,6 +24,7 @@ gem "nested_form"
 
 
 gem 'devise'
+gem 'bcrypt'
 gem 'cancancan' # or cancan
 #上传
 gem 'carrierwave'

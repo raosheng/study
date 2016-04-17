@@ -34,7 +34,11 @@
     <div class="col-lg-10">
       <%= f.check_box :status %>
     </div>
-    <%#=f.error_span(:status) %>
+    <div class="form-group">
+    <%= f.label :推荐, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.check_box :tj %>
+    </div>
   </div>
 
   <div class="form-group">

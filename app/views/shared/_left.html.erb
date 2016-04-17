@@ -1,11 +1,68 @@
-<!--左侧目录-->
-<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-  <div class="list-group">
-    <a href="#" class="list-group-item active">公共资源</a>
-    <a href="#" class="list-group-item">政府采购</a>
-    <a href="#" class="list-group-item">国土资源</a>
-    <a href="#" class="list-group-item">产权交易</a>
-    <a href="#" class="list-group-item">工程建设</a>
-    <a href="#" class="list-group-item">其他公共资源</a>
-</div>
-</div>
+<article>
+  <div class="l_box f_l">
+    <div class="banner">
+      <div id="slide-holder">
+        <div id="slide-runner"> <a href="/" target="_blank"><img id="slide-img-1" src="assets/a1.jpg"  alt="" /></a> <a href="/" target="_blank">
+          <img id="slide-img-2" src="assets/a2.jpg"  alt="" /></a> <a href="/" target="_blank">
+            <img id="slide-img-3" src="assets/a3.jpg"  alt="" /></a> <a href="/" target="_blank">
+              <img id="slide-img-4" src="assets/a4.jpg"  alt="" /></a>
+          <div id="slide-controls">
+            <p id="slide-client" class="text"><strong></strong><span></span></p>
+            <p id="slide-desc" class="text"></p>
+            <p id="slide-nav"></p>
+          </div>
+        </div>
+      </div>
+      <script>
+	  if(!window.slider) {
+		var slider={};
+	}
+
+	slider.data= [
+    {
+        "id":"slide-img-1", // 与slide-runner中的img标签id对应
+        "client":"标题1",
+        "desc":"这里修改描述 这里修改描述 这里修改描述" //这里修改描述
+    },
+    {
+        "id":"slide-img-2",
+        "client":"标题2",
+        "desc":"add your description here"
+    },
+    {
+        "id":"slide-img-3",
+        "client":"标题3",
+        "desc":"add your description here"
+    },
+    {
+        "id":"slide-img-4",
+        "client":"标题4",
+        "desc":"add your description here"
+    }
+	];
+
+	  </script>
+    </div>
+    <!-- banner代码 结束 -->
+
+        <div class="topnews">
+          <h2>
+            <span><a href="/" target="_blank">栏目标题</a>
+              <a href="/" target="_blank">栏目标题</a>
+              <a href="/" target="_blank">栏目标题</a>
+            </span><b>文章</b>推荐</h2>
+          <div class="blogs">
+            <% @articles.each do |article| %>
+            <figure><img src="assets/05.jpg"></figure>
+            <ul>
+              <h3><%= link_to article.title, article_path(article) %></h3>
+              <p><%= article.content %></p>
+              <p class="autor"><span class="lm f_l"><a href="/"><%= article.author %></a></span>
+                <span class="dtime f_l"><%= article.created_at.strftime('%Y-%m-%d %H:%M:%S') %></span>
+                <span class="viewnum f_r">浏览（<a href="/"><%= article.show_count %></a>）</span>
+                <span class="pingl f_r">评论（<a href="/">30</a>）</span></p>
+            </ul>
+            <% end %>
+          </div>
+        </div>
+      </div>

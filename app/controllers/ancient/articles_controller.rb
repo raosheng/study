@@ -1,9 +1,9 @@
-class Ancient::ArticlesController < ApplicationController
+class Ancient::ArticlesController < Ancient::HighController
 before_action :find_article, only: [:show, :edit, :update, :destroy]
-  layout "home"
+  #layout "home"
   def index
     @q = Article.ransack(params[:q])
-    @articles = @q.result.paginate(:page => params[:page], :per_page => 10)
+    @articles = @q.result.page(params[:page]).per(20)
   end
 
   def show
@@ -16,6 +16,7 @@ before_action :find_article, only: [:show, :edit, :update, :destroy]
    def create
      @article = Article.new(article_params)
     if @article.save
+      @article.update(show_count: 0,author: current_user.loginname)
       flash[:notice] = "操作成功"
       redirect_to ancient_articles_path
     else
@@ -40,6 +41,6 @@ before_action :find_article, only: [:show, :edit, :update, :destroy]
    end
 
    def article_params
-     params.require(:article).permit(:title, :content, :status)
+     params.require(:article).permit(:title,:tj, :content, :status)
    end
 end

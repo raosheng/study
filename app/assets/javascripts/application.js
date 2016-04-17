@@ -12,9 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require bootstrap/dropdown
-//= require bootstrap/alert
-//= require slide.min
-//= require_tree .
+//= require modernizr
+//= require nav
+//= require sliders
 //= require jquery_nested_form

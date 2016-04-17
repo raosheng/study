@@ -11,10 +11,30 @@ Rails.application.configure do
 
   # Show full error reports and disable caching.
   config.consider_all_requests_local       = true
-  config.action_controller.perform_caching = false
+  config.action_controller.perform_caching = true
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default_url_options={:host=>'localhost:3000'}
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default :charset => "utf-8"
+  config.action_mailer.smtp_settings = {
+     # :enable_starttls_auto => true,
+     # :address => "smtp.163.com",
+     # :port => 25,
+     # :domain => "163.com",
+     # :authentication => :login,
+     # :user_name => "raosheng_china@163.com", #邮箱
+     # :passwordr => "rs199312" #密码
+     :address => "smtp.mxhichina.com",
+    :port => 25,
+    :domain => "mxhichina.com",
+    :authentication => :login,
+    :user_name => "yggc@sinopr.org",
+    :password => "Yggc0302"
+   }
+
+
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log

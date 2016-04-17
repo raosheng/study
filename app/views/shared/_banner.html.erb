@@ -1,47 +1,28 @@
-<div class="navbar navbar-default navbar-static-top" style="background-color: #29A7E1;">
-  <div class="container">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="/">部落</a>
+  <!-- banner代码 开始 -->
+<header>
+  <!-- <div class="logo f_l"> <a href="/"><img src="assets/logo.png"></a> </div> -->
+  <nav id="topnav" class="f_r">
+    <ul>
+      <li>
+      <a href="/">首页</a>
+     <!--  <a href="news.html" target="_blank">关于我</a> -->
+      <a href="p.html" target="_blank">文章</a>
+      <a href="b.html" target="_blank">吐槽</a>
+      <% if user_signed_in? %>
+      <span class='f_r'>hello, <%= current_user.loginname %></span>
+      <% if current_user.loginname == 'raosheng'%>
+      <%= link_to '进入后台', ancient_welcome_index_path, class: "f_r" %>
+      <% end %>
+       <%= link_to '登出', destroy_user_session_path, :method => :delete, class: 'f_r' %>
 
-    <div class="navbar-collapse collapse navbar-responsive-collapse">
-      <ul class="nav navbar-nav banners">
-        <li><%= link_to "主页", home_index_path %></li>
-        <li><%= link_to "博文", articles_path %></li>
-        <!-- <li><%#= link_to "趣图", "/path3" %></li> -->
-        <!-- <li><%#= link_to "视频", "/path3" %></li> -->
-        <li><%= link_to "公共资源大数据", public_resources_path %></li>
-        <li><%#= link_to "关于", "/path3" %></li>
-      </ul>
+       <% end %>
+       <% unless user_signed_in? %>
+       <%= link_to '注册', new_user_registration_path, class: 'f_r'%>
+       <%= link_to '登录', new_user_session_path, class: 'f_r' %>
+       <% end %>
 
-      <ul class="nav navbar-nav navbar-right">
-         <%= form_tag articles_path, method: :get, class: "navbar-form navbar-left search-form" do %>
-        <li class="nav-search hidden-xs">
-          <%#= text_field_tag(:q,params[:q],placeholder: "请输入你想找的文章",class: "form-control") %>
-          <%#= submit_tag "搜索", class: "btn btn-primary"%>
-        </li>
-        <% end %>
-      </ul>
-
-
-    </div>
-  </div>
-</div>
-
-<style>
-.navbar-default .navbar-brand {
-  color: #fff;
-}
-.navbar-default .navbar-nav > li > a {
-  color: #fff;
-}
-
-</style>
-
-
-
-
-<!-- /container -->
+      
+     <li>
+    </ul>
+  </nav>
+</header>

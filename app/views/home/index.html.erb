@@ -1,51 +1,217 @@
+<!--[if lt IE 9]>
+<script src="js/modernizr.js"></script>
+<![endif]-->
 
-<section class="slider cl has-dots">
-  <!--<a href="javascript:void(0)" class="unslider-arrow prev"><</a>--> <!--上一张控制按钮-->
-  <!--<a href="javascript:void(0)" class="unslider-arrow next">></a>--><!--下一张控制按钮-->
-  <!--左右控制按钮，如果不需要可以直接删除代码。-->
-  <ul class="tabcon">
-    <li><%= image_tag("http://www.js-css.cn/jscode/focus/focus75/01.jpg", width: "100%", height: "540") %></li>
-    <li><%= image_tag("http://www.js-css.cn/jscode/focus/focus75/01.jpg", width: "100%", height: "540") %></li>
-    <li><%= image_tag("http://www.js-css.cn/jscode/focus/focus75/01.jpg", width: "100%", height: "540") %></li>
-    <li><%= image_tag("http://www.js-css.cn/jscode/focus/focus75/01.jpg", width: "100%", height: "540") %></li>
-  </ul>
-</section>
-<style type="text/css">
-.slider{margin-top: -20px;position:relative;text-align:center}
-.slider .tabcon li{ float: left;overflow:hidden}/*自适应宽高*/
-.dots{ position:absolute;right:0px; bottom:10px; text-align:center} /*修改text-align 值 可以调整控制点是居中、居右、居左*/
-.dots span{display:inline-block;text-align:center;width:8px; height:8px; font-size:0px;line-height:0px;margin-right:8px;cursor:pointer; background-color:#C2C2C2;-khtml-border-radius:8px;-ms-border-radius:8px;-o-border-radius:8px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}
-.dots span.active{ background-color:#222;}
-/*数字方框控制*/
-.numSlider .dots span{width:20px; height:20px; line-height:20px; font-size:13px; margin-right:10px;line-height:20px;background-color:#fff;font-family:Arial;font-weight:bold;text-indent:inherit;-khtml-border-radius:0px;-ms-border-radius:0px;-o-border-radius:0px;-moz-border-radius:0px;-webkit-border-radius:0px;border-radius:0px}
-.numSlider .dots span.active{background-color:#222;color:#fff;}
-/*长方条控制*/
-.boxSlider .dots span{ width:40px; height:10px;-khtml-border-radius:0px;-ms-border-radius:0px;-o-border-radius:0px;-moz-border-radius:0px;-webkit-border-radius:0px;border-radius:0px}
-/*圆角长方条控制*/
-.boxRadius .dots span{ width:40px;}
-.unslider-arrow{ display:block; position:absolute; top:50%; margin-top:-25px;height: 50px;width: 50px; z-index:3;opacity: 0.7;filter: alpha(opacity=70); background-color:#303030; background-image:url(../images/unslider-arrow.png); background-repeat:no-repeat}
-.prev{ left:0px; background-position:0 0}
-.next{ right:0px;background-position:right 0}
-</style>
+<article>
+  <div class="l_box f_l">
+    <div class="banner">
+      <div id="slide-holder">
+        <div id="slide-runner"> <a href="/" target="_blank"><img id="slide-img-1" src="assets/a1.jpg"  alt="" /></a> <a href="/" target="_blank">
+          <img id="slide-img-2" src="assets/a2.jpg"  alt="" /></a> <a href="/" target="_blank">
+            <img id="slide-img-3" src="assets/a3.jpg"  alt="" /></a> <a href="/" target="_blank">
+              <img id="slide-img-4" src="assets/a4.jpg"  alt="" /></a>
+          <div id="slide-controls">
+            <p id="slide-client" class="text"><strong></strong><span></span></p>
+            <p id="slide-desc" class="text"></p>
+            <p id="slide-nav"></p>
+          </div>
+        </div>
+      </div>
+      <script>
+	  if(!window.slider) {
+		var slider={};
+	}
+
+	slider.data= [
+    {
+        "id":"slide-img-1", // 与slide-runner中的img标签id对应
+        "client":"你必须知道的Rails 5新特性",
+        "desc":"比如说 Action Cable 和改进的 Turbolinks 新特性" //这里修改描述
+    },
+    {
+        "id":"slide-img-2",
+        "client":"5 个常见的 Rails 开发误区",
+        "desc":"数据模型是应用程序的核心"
+    },
+    {
+        "id":"slide-img-3",
+        "client":"5 个常见的 Rails 开发误区",
+        "desc":"对你调用的第三方服务使用facade（外观模式）"
+    },
+    {
+        "id":"slide-img-4",
+        "client":"代码审查 ",
+        "desc":"不要没有经过任何测试就合并你的pull request"
+    }
+	];
+
+	  </script>
+    </div>
+    <!-- banner代码 结束 -->
+
+        <div class="topnews">
+          <h2>
+            <span><!-- <a href="/" target="_blank">栏目标题</a>
+              <a href="/" target="_blank">栏目标题</a>
+              <a href="/" target="_blank">栏目标题</a> -->
+            </span><b>文章</b>推荐</h2>
+          <div class="blogs">
+            <% @articles.each do |article| %>
+            <div class="curent">
+            <figure><img src="assets/05.jpg"></figure>
+            <ul>
+              <h3><%= link_to article.title, article_path(article) %></h3>
+              <p><%= truncate(article.content, length: 100) %></p>
+              <p class="autor"><span class="lm f_l"><a href="/"><%= article.author %></a></span>
+                <span class="dtime f_l"><%= article.created_at.strftime('%Y-%m-%d %H:%M:%S') %></span>
+                <span class="viewnum f_r">浏览（<a href="/"><%= article.show_count %></a>）</span>
+                <span class="pingl f_r">评论（<a href="/">30</a>）</span></p>
+            </ul>
+            </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
 
 
-<script type="text/javascript" >
+        <div class="r_box f_r">
+          <div class="tit01">
+            <h3>关注我</h3>
+            <div class="gzwm">
+              <ul>
+                <li><a class="xlwb" href="#" target="_blank">微信扫一扫</a></li>
+                <li><a class="txwb" href="#" target="_blank">Github</a></li>
+                <li><a class="wx" href="mailto:admin@admin.com">邮箱</a></li>
+              </ul>
+            </div>
+          </div>
+          <!--tit01 end-->
+          <div class="ad300x100"> <img src="assets/ad300x100.jpg"> </div>
+          <div class="moreSelect" id="lp_right_select">
+            <script>
+      window.onload = function ()
+      {
+      	var oLi = document.getElementById("tab").getElementsByTagName("li");
+      	var oUl = document.getElementById("ms-main").getElementsByTagName("div");
 
-$(function() {
-if(window.chrome){$('.slider li').css('background-size', '100% 100%');}
-$('.slider').unslider({
-speed: 500,               //  滚动速度
-delay: 3000,              //  动画延迟
-complete: function() {},  //  动画完成的回调函数
-keys: true,               //  启动键盘导航
-dots: true,               //  显示点导航
-fluid: true               //  支持响应式设计
-});
-// 左右控制js
-var unslider = $('.slider').unslider();
-$('.unslider-arrow').click(function(){
-var fn = this.className.split(' ')[1];
-unslider.data('unslider')[fn]();
-});
-});
-</script>
+      	for(var i = 0; i < oLi.length; i++)
+      	{
+      		oLi[i].index = i;
+      		oLi[i].onmouseover = function ()
+      		{
+      			for(var n = 0; n < oLi.length; n++) oLi[n].className="";
+      			this.className = "cur";
+      			for(var n = 0; n < oUl.length; n++) oUl[n].style.display = "none";
+      			oUl[this.index].style.display = "block"
+      		}
+      	}
+      }
+      </script>
+            <div class="ms-top">
+              <ul class="hd" id="tab">
+                <li class="cur"><a href="/">点击排行</a></li>
+                <li><a href="/">最新文章</a></li>
+                <li><a href="/">站长推荐</a></li>
+              </ul>
+            </div>
+            <div class="ms-main" id="ms-main">
+              <div style="display: block;" class="bd bd-news" >
+                <ul>
+                <% @pai_artices.each do |article| %>
+                <li><%= link_to article.title, article_path(article) %></li>
+                <% end %>
+                  <!-- <li><a href="/" target="_blank">住在手机里的朋友</a></li>
+                  <li><a href="/" target="_blank">教你怎样用欠费手机拨打电话</a></li>
+                  <li><a href="/" target="_blank">原来以为，一个人的勇敢是，删掉他的手机号码...</a></li>
+                  <li><a href="/" target="_blank">手机的16个惊人小秘密，据说99.999%的人都不知</a></li>
+                  <li><a href="/" target="_blank">你面对的是生活而不是手机</a></li>
+                  <li><a href="/" target="_blank">豪雅手机正式发布! 在法国全手工打造的奢侈品</a></li> -->
+                </ul>
+              </div>
+              <div  class="bd bd-news">
+                <ul>
+                <% @xin_articles.each do |article| %>
+                <li><%= link_to article.title, article_path(article) %></li>
+                <% end %>
+
+                <!--   <li><a href="/" target="_blank">原来以为，一个人的勇敢是，删掉他的手机号码...</a></li>
+                  <li><a href="/" target="_blank">手机的16个惊人小秘密，据说99.999%的人都不知</a></li>
+                  <li><a href="/" target="_blank">住在手机里的朋友</a></li>
+                  <li><a href="/" target="_blank">教你怎样用欠费手机拨打电话</a></li>
+                  <li><a href="/" target="_blank">你面对的是生活而不是手机</a></li>
+                  <li><a href="/" target="_blank">豪雅手机正式发布! 在法国全手工打造的奢侈品</a></li> -->
+                </ul>
+              </div>
+              <div class="bd bd-news">
+                <ul>
+                <% @tj_articles.each do |article| %>
+                <li><%= link_to article.title, article_path(article) %></li>
+                <% end %>
+                  <!-- <li><a href="/" target="_blank">手机的16个惊人小秘密，据说99.999%的人都不知</a></li>
+                  <li><a href="/" target="_blank">你面对的是生活而不是手机</a></li>
+                  <li><a href="/" target="_blank">住在手机里的朋友</a></li>
+                  <li><a href="/" target="_blank">豪雅手机正式发布! 在法国全手工打造的奢侈品</a></li>
+                  <li><a href="/" target="_blank">教你怎样用欠费手机拨打电话</a></li>
+                  <li><a href="/" target="_blank">原来以为，一个人的勇敢是，删掉他的手机号码...</a></li> -->
+                </ul>
+              </div>
+            </div>
+            <!--ms-main end -->
+          </div>
+          <!--切换卡 moreSelect end -->
+
+          <div class="cloud">
+            <h3>标签云</h3>
+            <ul>
+              <li><a href="/">个人博客</a></li>
+              <li><a href="/">web开发</a></li>
+              <li><a href="/">前端设计</a></li>
+              <li><a href="/">Html</a></li>
+              <li><a href="/">CSS3</a></li>
+              <li><a href="/">Html5+css3</a></li>
+              <li><a href="/">百度</a></li>
+              <li><a href="/">Javasript</a></li>
+              <li><a href="/">web开发</a></li>
+              <li><a href="/">前端设计</a></li>
+              <li><a href="/">Html</a></li>
+              <li><a href="/">CSS3</a></li>
+              <li><a href="/">Html5+css3</a></li>
+              <li><a href="/">百度</a></li>
+            </ul>
+          </div>
+          <div class="tuwen">
+            <h3>图文推荐</h3>
+            <ul>
+              <li><a href="/"><img src="assets/03.jpg"><b>住在手机里的朋友</b></a>
+                <p><span class="tulanmu"><a href="/">手机配件</a></span><span class="tutime">2015-02-15</span></p>
+              </li>
+              <li><a href="/"><img src="assets/03.jpg"><b>教你怎样用欠费手机拨打电话</b></a>
+                <p><span class="tulanmu"><a href="/">手机配件</a></span><span class="tutime">2015-02-15</span></p>
+              </li>
+              <li><a href="/" title="手机的16个惊人小秘密，据说99.999%的人都不知"><img src="assets/03.jpg"><b>手机的16个惊人小秘密，据说...</b></a>
+                <p><span class="tulanmu"><a href="/">手机配件</a></span><span class="tutime">2015-02-15</span></p>
+              </li>
+              <li><a href="/"><img src="assets/03.jpg"><b>住在手机里的朋友</b></a>
+                <p><span class="tulanmu"><a href="/">手机配件</a></span><span class="tutime">2015-02-15</span></p>
+              </li>
+              <li><a href="/"><img src="assets/03.jpg"><b>教你怎样用欠费手机拨打电话</b></a>
+                <p><span class="tulanmu"><a href="/">手机配件</a></span><span class="tutime">2015-02-15</span></p>
+              </li>
+            </ul>
+          </div>
+          <div class="ad"> <img src="assets/03.jpg"> </div>
+          <div class="links">
+            <h3><span>[<a href="/">申请友情链接</a>]</span>友情链接</h3>
+            <ul>
+              <li><a href="/">个人博客</a></li>
+              <li><a href="/">web开发</a></li>
+              <li><a href="/">前端设计</a></li>
+              <li><a href="/">Html</a></li>
+              <li><a href="/">CSS3</a></li>
+              <li><a href="/">Html5+css3</a></li>
+              <li><a href="/">百度</a></li>
+            </ul>
+          </div>
+        </div>
+        <!--r_box end -->
+        </article>

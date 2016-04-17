@@ -1,0 +1,51 @@
+
+<section class="slider cl has-dots">
+  <!--<a href="javascript:void(0)" class="unslider-arrow prev"><</a>--> <!--上一张控制按钮-->
+  <!--<a href="javascript:void(0)" class="unslider-arrow next">></a>--><!--下一张控制按钮-->
+  <!--左右控制按钮，如果不需要可以直接删除代码。-->
+  <ul class="tabcon">
+    <li><%= image_tag("http://www.js-css.cn/jscode/focus/focus75/01.jpg", width: "100%", height: "540") %></li>
+    <li><%= image_tag("http://www.js-css.cn/jscode/focus/focus75/01.jpg", width: "100%", height: "540") %></li>
+    <li><%= image_tag("http://www.js-css.cn/jscode/focus/focus75/01.jpg", width: "100%", height: "540") %></li>
+    <li><%= image_tag("http://www.js-css.cn/jscode/focus/focus75/01.jpg", width: "100%", height: "540") %></li>
+  </ul>
+</section>
+<style type="text/css">
+.slider{margin-top: -20px;position:relative;text-align:center}
+.slider .tabcon li{ float: left;overflow:hidden}/*自适应宽高*/
+.dots{ position:absolute;right:0px; bottom:10px; text-align:center} /*修改text-align 值 可以调整控制点是居中、居右、居左*/
+.dots span{display:inline-block;text-align:center;width:8px; height:8px; font-size:0px;line-height:0px;margin-right:8px;cursor:pointer; background-color:#C2C2C2;-khtml-border-radius:8px;-ms-border-radius:8px;-o-border-radius:8px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}
+.dots span.active{ background-color:#222;}
+/*数字方框控制*/
+.numSlider .dots span{width:20px; height:20px; line-height:20px; font-size:13px; margin-right:10px;line-height:20px;background-color:#fff;font-family:Arial;font-weight:bold;text-indent:inherit;-khtml-border-radius:0px;-ms-border-radius:0px;-o-border-radius:0px;-moz-border-radius:0px;-webkit-border-radius:0px;border-radius:0px}
+.numSlider .dots span.active{background-color:#222;color:#fff;}
+/*长方条控制*/
+.boxSlider .dots span{ width:40px; height:10px;-khtml-border-radius:0px;-ms-border-radius:0px;-o-border-radius:0px;-moz-border-radius:0px;-webkit-border-radius:0px;border-radius:0px}
+/*圆角长方条控制*/
+.boxRadius .dots span{ width:40px;}
+.unslider-arrow{ display:block; position:absolute; top:50%; margin-top:-25px;height: 50px;width: 50px; z-index:3;opacity: 0.7;filter: alpha(opacity=70); background-color:#303030; background-image:url(../images/unslider-arrow.png); background-repeat:no-repeat}
+.prev{ left:0px; background-position:0 0}
+.next{ right:0px;background-position:right 0}
+</style>
+
+
+<script type="text/javascript" >
+
+$(function() {
+if(window.chrome){$('.slider li').css('background-size', '100% 100%');}
+$('.slider').unslider({
+speed: 500,               //  滚动速度
+delay: 3000,              //  动画延迟
+complete: function() {},  //  动画完成的回调函数
+keys: true,               //  启动键盘导航
+dots: true,               //  显示点导航
+fluid: true               //  支持响应式设计
+});
+// 左右控制js
+var unslider = $('.slider').unslider();
+$('.unslider-arrow').click(function(){
+var fn = this.className.split(' ')[1];
+unslider.data('unslider')[fn]();
+});
+});
+</script>
