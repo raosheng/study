@@ -29,10 +29,10 @@
 // .autor span { margin: 0 10px 0 0; padding-left: 10px }
 .autor span a { color: #759b08; }
 .autor span a:hover { text-decoration: underline }
-.lm { background: url(../images/newsbg01.png) no-repeat left center }
-.dtime { background: url(../images/newsbg02.png) no-repeat left center }
-.viewnum { background: url(../images/newsbg04.png) no-repeat left center }
-.pingl { background: url(../images/newsbg03.png) no-repeat left center }
+.lm { background: url(/assets/newsbg01.png) no-repeat left center }
+.dtime { background: url(/assets/newsbg02.png) no-repeat left center }
+.viewnum { background: url(/assets/newsbg04.png) no-repeat left center }
+.pingl { background: url(/assets/newsbg03.png) no-repeat left center }
 .tit01 h3 { line-height: 40px; color: #38485A; font-size: 18px; border-bottom: 1px solid #E6E6E6; height: 40px }
 /* 关注我样式 */
 .gzwm ul { width: 100%; margin: 30px 0; overflow: hidden }
@@ -55,10 +55,10 @@
 .tuwen li a b:hover { text-decoration: underline; color: #F60 }
 .tuwen li span { color: #999; margin-right: 10px }
 .tuwen p { margin-top: 5px }
-.tulanmu { background: url(../images/lanmbq.png) no-repeat center left; padding-left: 17px }
+.tulanmu { background: url(/assets/lanmbq.png) no-repeat center left; padding-left: 17px }
 .tulanmu a { color: #999; }
 .tulanmu a:hover { color: #066 }
-.tutime { background: url(../images/datepng.png) no-repeat left center; padding-left: 15px }
+.tutime { background: url(/assets/datepng.png) no-repeat left center; padding-left: 15px }
 .tuwen li:hover { background: #f4f3f3 }
 /*首页右侧广告 300*/
 .ad { width: 300px; overflow: hidden; margin: 30px 0 }

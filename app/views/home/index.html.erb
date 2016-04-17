@@ -6,10 +6,10 @@
   <div class="l_box f_l">
     <div class="banner">
       <div id="slide-holder">
-        <div id="slide-runner"> <a href="/" target="_blank"><img id="slide-img-1" src="assets/a1.jpg"  alt="" /></a> <a href="/" target="_blank">
-          <img id="slide-img-2" src="assets/a2.jpg"  alt="" /></a> <a href="/" target="_blank">
-            <img id="slide-img-3" src="assets/a3.jpg"  alt="" /></a> <a href="/" target="_blank">
-              <img id="slide-img-4" src="assets/a4.jpg"  alt="" /></a>
+        <div id="slide-runner"> <a><%= image_tag("a1.jpg", id: "slide-img-3") %></a>
+          <a><%= image_tag("a2.jpg", id: "slide-img-3") %></a>
+          <a><%= image_tag("a3.jpg", id: "slide-img-3") %></a>   
+          <a><%= image_tag("a4.jpg", id: "slide-img-4") %></a>
           <div id="slide-controls">
             <p id="slide-client" class="text"><strong></strong><span></span></p>
             <p id="slide-desc" class="text"></p>
@@ -58,7 +58,7 @@
           <div class="blogs">
             <% @articles.each do |article| %>
             <div class="curent">
-            <figure><img src="assets/05.jpg"></figure>
+            <figure><%= image_tag("05.jpg") %></figure>
             <ul>
               <h3><%= link_to article.title, article_path(article) %></h3>
               <p><%= truncate(article.content, length: 100) %></p>
@@ -86,7 +86,7 @@
             </div>
           </div>
           <!--tit01 end-->
-          <div class="ad300x100"> <img src="assets/ad300x100.jpg"> </div>
+          <div class="ad300x100"><%= image_tag("ad300x100.jpg") %></div>
           <div class="moreSelect" id="lp_right_select">
             <script>
       window.onload = function ()
