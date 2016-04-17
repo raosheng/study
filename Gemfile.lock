@@ -232,7 +232,7 @@ DEPENDENCIES
   nokogiri
   rails (= 4.2.0)
   ransack!
-  sass-rails (>= 3.2)
+  sass-rails (>= 3.2.0)
   sdoc (~> 0.4.0)
   simple_form
   spreadsheet
