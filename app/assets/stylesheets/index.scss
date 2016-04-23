@@ -30,7 +30,7 @@
 .autor span a { color: #759b08; }
 .autor span a:hover { text-decoration: underline }
 .lm { background-image: image-url("newsbg01.png") no-repeat left center }
-.dtime { background: image-url("newsbg02.png") no-repeat left center }
+.dtime { background-image: image-url("newsbg02.png") no-repeat left center }
 .viewnum { background-image: image-url("newsbg04.png") no-repeat left center }
 .pingl { background-image: image-url("newsbg03.png") no-repeat left center }
 .tit01 {height: 260px;}
@@ -39,14 +39,14 @@
 .gzwm ul { width: 100%; margin: 30px 0; overflow: hidden }
 .gzwm li { width: 52px; margin: 0 18px 0 5px; float: left; }
 .gzwm li a { color: #747F8C; width: 52px; text-align: center; padding-top: 60px; float: left; }
-.gzwm .rss { background: url(/assets/ico_04_1.jpg) no-repeat scroll 0% 0% transparent; }
-.gzwm .rss:hover { color: #000; background: url(/assets/ico_04.png) no-repeat scroll 0% 0% transparent; }
-.gzwm .xlwb { background: url(/assets/ico_05_1.jpg) no-repeat scroll 0% 0% transparent; }
-.gzwm .xlwb:hover { color: #000; background: url(/assets/ico_05.png) no-repeat scroll 0% 0% transparent; }
-.gzwm .txwb { background: url(/assets/ico_06_1.jpg) no-repeat scroll 0% 0% transparent; }
-.gzwm .txwb:hover { color: #000; background: url(/assets/ico_06.png) no-repeat scroll 0% 0% transparent; }
-.gzwm .wx { background: url(/assets/ico_07_1.jpg) no-repeat scroll 0% 0% transparent; }
-.gzwm .wx:hover { color: #000; background: url(/assets/ico_07.png) no-repeat scroll 0% 0% transparent; }
+.gzwm .rss { background-image: image-url("ico_04_1.jpg") no-repeat scroll 0% 0% transparent; }
+.gzwm .rss:hover { color: #000; background-image: image-url("ico_04.png") no-repeat scroll 0% 0% transparent; }
+.gzwm .xlwb { background-image: image-url("ico_05_1.jpg") no-repeat scroll 0% 0% transparent; }
+.gzwm .xlwb:hover { color: #000; background-image: image-url("ico_05.png") no-repeat scroll 0% 0% transparent; }
+.gzwm .txwb { background-image: image-url("ico_06_1.jpg") no-repeat scroll 0% 0% transparent; }
+.gzwm .txwb:hover { color: #000; background-image: image-url("ico_06.png") no-repeat scroll 0% 0% transparent; }
+.gzwm .wx { background-image: image-url("ico_07_1.jpg") no-repeat scroll 0% 0% transparent; }
+.gzwm .wx:hover { color: #000; background-image: image-url("ico_07.png") no-repeat scroll 0% 0% transparent; }
 /*图文列表*/
 .tuwen { width: 100%; clear: both; overflow: hidden; margin: 20px 0 }
 .tuwen h3 { line-height: 40px; color: #38485A; font-size: 18px; border-bottom: 1px solid #E6E6E6; height: 40px; margin-bottom: 30px }
@@ -56,10 +56,10 @@
 .tuwen li a b:hover { text-decoration: underline; color: #F60 }
 .tuwen li span { color: #999; margin-right: 10px }
 .tuwen p { margin-top: 5px }
-.tulanmu { background: url(/assets/lanmbq.png) no-repeat center left; padding-left: 17px }
+.tulanmu { background-image: image-url("lanmbq.png") no-repeat center left; padding-left: 17px }
 .tulanmu a { color: #999; }
 .tulanmu a:hover { color: #066 }
-.tutime { background: url(/assets/datepng.png) no-repeat left center; padding-left: 15px }
+.tutime { background-image: image-url("datepng.png") no-repeat left center; padding-left: 15px }
 .tuwen li:hover { background: #f4f3f3 }
 /*首页右侧广告 300*/
 .ad { width: 300px; overflow: hidden; margin: 30px 0 }
